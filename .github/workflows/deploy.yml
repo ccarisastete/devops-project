@@ -26,11 +26,11 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-west-1  # Cambia la región si es necesario
+          aws-region: us-east-1  # Cambia la región si es necesario
 
       - name: Set up kubeconfig for EKS
         run: |
-          aws eks update-kubeconfig --name devops-cluster --region us-west-2
+          aws eks update-kubeconfig --name devops-cluster --region us-east-1
 
       - name: Deploy to Kubernetes
         run: |
